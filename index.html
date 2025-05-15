@@ -1,0 +1,1165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Accessibility FAQ</title>
+  <style>
+    :root {
+      --primary-color: #0078d4;
+      --bg-light: #f0f4f9;
+      --bg-dark: #1e1e2f;
+      --text-light: #333;
+      --text-dark: #f1f1f1;
+      --card-light: #fff;
+      --card-dark: #2a2a3c;
+      --hover-light: #dceeff;
+      --hover-dark: #33364d;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: var(--bg-light);
+      color: var(--text-light);
+      transition: background 0.3s, color 0.3s;
+      padding: 2rem;
+    }
+
+    body.dark-mode {
+      background-color: var(--bg-dark);
+      color: var(--text-dark);
+    }
+
+    .faq-section {
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .faq-header-bar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 2rem;
+    }
+
+    .toggle-btn {
+      background: var(--primary-color);
+      color: white;
+      padding: 0.5rem 1rem;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      font-weight: 500;
+      transition: background 0.3s;
+    }
+
+    .toggle-btn:hover {
+      background: #005fa3;
+    }
+
+    .faq-card {
+      background-color: var(--card-light);
+      border-radius: 10px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+      margin-bottom: 1rem;
+      overflow: hidden;
+      transition: background 0.3s;
+    }
+
+    body.dark-mode .faq-card {
+      background-color: var(--card-dark);
+    }
+
+    .faq-header {
+      padding: 1rem 1.5rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 1.1rem;
+      font-weight: 600;
+      cursor: pointer;
+      background-color: var(--hover-light);
+      transition: background 0.3s;
+    }
+
+    .faq-header:hover {
+      background-color: #cde4ff;
+    }
+
+    body.dark-mode .faq-header {
+      background-color: var(--hover-dark);
+    }
+
+    .arrow {
+      display: inline-block;
+      transition: transform 0.3s ease;
+    }
+
+    .faq-card.open .arrow {
+      transform: rotate(90deg);
+    }
+
+    .faq-content {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.4s ease;
+      padding: 0 1.5rem;
+    }
+
+    .faq-content.open {
+      padding: 1rem 1.5rem 1.5rem;
+    }
+
+    .faq-content ul {
+      padding-left: 1.2rem;
+    }
+
+    .faq-content li {
+      margin-bottom: 0.75rem;
+      line-height: 1.6;
+    }
+
+    strong {
+      display: block;
+      margin-bottom: 0.5rem;
+      font-size: 1.05rem;
+    }
+
+    .faq-image {
+      width: 100%;
+      max-width: 400px;
+      display: block;
+      margin-bottom: 1rem;
+    }
+
+    .study-breakdown ul {
+      padding-left: 1.2rem;
+    }
+
+    .study-breakdown ul li {
+      margin-bottom: 1rem;
+    }
+
+    .study-breakdown strong {
+      font-size: 1.1rem;
+      color: var(--primary-color);
+    }
+
+  </style>
+</head>
+<body>
+
+  <div class="faq-section">
+    <div class="faq-header-bar">
+      <h2>Policies</h2>
+      <button class="toggle-btn" onclick="toggleDarkMode()">Toggle Dark Mode</button>
+    </div>
+
+    <!-- FAQ Card for Guide Dog Travel Policy -->
+    <div class="faq-card" id="faq1">
+      <div class="faq-header" onclick="toggleFAQ(this)">
+        1. Guide Dog Travel Policy
+        <span class="arrow">▶</span>
+      </div>
+
+      <div class="faq-content">
+        <img src="https://i.postimg.cc/6pyLzTR3/Guide-Dog-1.png" 
+             alt="Guide dog assisting traveler" 
+             class="faq-image" />
+
+        <strong>1) Customers Traveling with a Guide Dog</strong>
+        <ul>
+          <li>Inform IndiGo 48 hours prior to departure via the call center.</li>
+          <li>Seating in 1st row (window), guide dog at feet (not on a seat).</li>
+          <li>Bring a moisture absorbent mat for the dog.</li>
+          <li>Dog must be trained, restrained, muzzled, and vaccinated.</li>
+          <li>Dog should be clean and odor-free.</li>
+          <li>Only one guide dog per flight per sector allowed.</li>
+          <li>Not allowed on ATR 72-600 aircraft for safety reasons.</li>
+          <li>PETC (Seeing Eye, hearing dogs) also not allowed on ATR 72-600.</li>
+          <li>Meet & assist available on request.</li>
+          <li>For international travel, meet destination country regulations.</li>
+            <strong> 2. Training and Vaccination Proof</strong>
+<li>Customers must provide complete and valid documentation proving that the
+guide dog is a trained service animal, including an identification card and
+certification from an appropriate institution.</li>
+<li>A certificate of vaccination must be presented at check-in as proof that the guide
+dog is vaccinated and medicated.</li>
+<li>IndiGo reserves the right to deny boarding or remove the guide dog if it exhibits
+behavior that poses a health or safety risk to customers or crew.</li>
+
+        </ul>
+      </div>
+    </div>
+
+    <!-- FAQ Card for Stretcher Policy -->
+    <div class="faq-card" id="faq2">
+      <div class="faq-header" onclick="toggleFAQ(this)">
+        2. Customers Requiring a Stretcher
+        <span class="arrow">▶</span>
+      </div>
+
+      <div class="faq-content study-breakdown">      
+        <strong>1) Reservation Process:</strong>
+        <ul>
+          <li>Must be processed through the call center at least 48 hours before departure (Domestic & International).</li>
+          <li>MEDIF Form needs to be filled and sent to MCC  for approval.</li>
+          <li>MCC informs the call center within 24 hours of approval.</li>
+          <li>The call center confirms the reservation for the customer, including:
+            <ul>
+              <li>Fee for both domestic and international sectors.</li>
+              <li>Cost of 09 seats (paid by the customer).</li>
+            </ul>
+          </li>
+        </ul>
+
+        <strong>2) Stretcher Arrangement on Aircraft:</strong>
+        <ul>
+          <li>OCC, AOCS, and ENGto be informed to block the last 3 rows on the port side of the aircraft for the stretcher.</li>
+          <li>Customer on a stretcher must always be escorted by an able-bodied family member or doctor.</li>
+        </ul>
+
+        <strong>3) International Flight Requirements:</strong>
+        <ul>
+          <li>Customers must include their booking confirmation/PNR number when sharing details with the call center team via email.</li>
+          <li>AOCS informs the captain/crew  and downline station.</li>
+        </ul>
+
+        <strong>4) Flight Restrictions:</strong>
+        <ul>
+          <li>IndiGo does not book stretchers on ATR 72-600 flights.</li>
+        </ul>
+      </div>
+    </div>
+
+<!-- FAQ Card for Additional Baggage Handling Fees (ABHF SSR) -->
+<div class="faq-card" id="faq1">
+  <div class="faq-header" onclick="toggleFAQ(this)">
+    3. Additional Baggage Handling Fees (ABHF SSR)
+    <span class="arrow">▶</span>
+  </div>
+
+  <div class="faq-content">
+    <img src="https://i.postimg.cc/B6nQ9TPT/extra-baggage.png" 
+         alt="Additional baggage fees illustration" 
+         class="faq-image" />
+
+    <strong>1) General Policy</strong>
+    <ul>
+      <li>One piece of checked-in baggage up to 15 kg is allowed free of charge on domestic flights.</li>
+      <li>An additional check-in bag incurs a fee of INR 1000, termed as ABHF.</li>
+      <li>Staff must manually select and add the ABHF fee in F6 and collect the amount from the customer.</li>
+    </ul>
+
+    <strong>2) Scenario-Based Application</strong>
+    <ul>
+      <li><strong>Scenario 1:</strong> 2 bags, total 15 kg
+        <ul>
+          <li>Staff must manually add ABHF fee in F6 for the second bag and collect INR 1000.</li>
+        </ul>
+      </li>
+      <li><strong>Scenario 2:</strong> 3 bags, total 15 kg
+        <ul>
+          <li>ABHF must be added twice in F6, once for each additional bag. Total fee: INR 2000.</li>
+        </ul>
+      </li>
+      <li><strong>Scenario 3:</strong> 2 bags, total 20 kg
+        <ul>
+          <li>System will prompt excess baggage charges for 5 kg.</li>
+          <li>Staff must also manually add ABHF in F6 for the second bag.</li>
+          <li>Customer pays both excess baggage and handling fee.</li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+</div>
+
+<!-- FAQ Card for Baggage Protection Product - Blue Ribbon -->
+<div class="faq-card" id="faq2">
+  <div class="faq-header" onclick="toggleFAQ(this)">
+    4. Baggage Protection Product - Blue Ribbon
+    <span class="arrow">▶</span>
+  </div>
+
+  <div class="faq-content">
+    <img src="https://i.postimg.cc/SxYKhdTv/baggage-protection.png" 
+         alt="Baggage protection icon" 
+         class="faq-image" />
+
+    <strong>1) Overview</strong>
+    <ul>
+      <li>Blue Ribbon Baggage Protection can be purchased online via the website or mobile app.</li>
+      <li>Purchase is available up to:
+        <ul>
+          <li>2 hours before domestic flights</li>
+          <li>4 hours before international flights</li>
+        </ul>
+      </li>
+    </ul>
+
+    <strong>2) Pricing</strong>
+    <ul>
+      <li>Domestic: INR 95 per customer per PNR</li>
+      <li>International: INR 330 per customer per PNR</li>
+    </ul>
+
+    <strong>3) Identification</strong>
+    <ul>
+      <li>SSR codes for verification:
+        <ul>
+          <li><strong>LBG</strong> for Domestic flights</li>
+          <li><strong>BRB</strong> for International flights</li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+</div>
+<!-- FAQ Card for COC Simplified - LCD/LED TV Charges -->
+<div class="faq-card" id="faq3">
+  <div class="faq-header" onclick="toggleFAQ(this)">
+    5. COC Simplified - LCD/LED TV & Special Baggage Charges
+    <span class="arrow">▶</span>
+  </div>
+
+  <div class="faq-content">
+    <img src="https://i.postimg.cc/qMNMWxQt/oversize-baggage.png" 
+         alt="Large baggage handling" 
+         class="faq-image" />
+
+    <strong>1) Special Baggage Charges</strong>
+    <ul>
+      <li>IndiGo applies charges for special baggage on both domestic and international flights.</li>
+      <li>This includes:
+        <ul>
+          <li>Sports/Skiing Equipment</li>
+          <li>Golf Bags</li>
+          <li>Bicycles</li>
+          <li>Surfboards</li>
+          <li>LCD/LED TVs sized 40 inches and above</li>
+          <li>Cartons and other large/odd-sized items</li>
+        </ul>
+      </li>
+      <li>Any item with dimensions (L+W+H) exceeding 158 cm (62 inches) is subject to this fee.</li>
+      <li>This fee is in addition to any applicable excess baggage charges.</li>
+    </ul>
+
+    <strong>2) SPEQ SSR (Pre-booked Sports Equipment)</strong>
+    <ul>
+      <li>When SPEQ SSR is attached to the booking, bulk charges should <u>not</u> be applied at check-in.</li>
+      <li>Ensure that airport staff verify the SSR before charging for special baggage.</li>
+    </ul>
+  </div>
+</div>
+<!-- FAQ Card for 6E Double Seats Airport Process -->
+<div class="faq-card" id="faq4">
+  <div class="faq-header" onclick="toggleFAQ(this)">
+    6. 6E Double Seats Airport Process
+    <span class="arrow">▶</span>
+  </div>
+
+  <div class="faq-content">
+    <img src="https://i.postimg.cc/tTDs32J4/double-seat.png" 
+         alt="Passenger booking two seats" 
+         class="faq-image" />
+
+    <strong>1) Booking & Eligibility</strong>
+    <ul>
+      <li>Extra seats can be booked for personal comfort or due to physical dimensions (e.g. obese customers).</li>
+      <li>Customers are charged for the additional seat and are allowed:
+        <ul>
+          <li>Extra 10 kg of baggage</li>
+          <li>Two pieces of checked-in baggage</li>
+        </ul>
+      </li>
+      <li>Extra seat booking is not allowed:
+        <ul>
+          <li>Within 2 hours for domestic flights</li>
+          <li>Within 4 hours for international flights</li>
+        </ul>
+      </li>
+    </ul>
+
+    <strong>2) Web Check-in Process</strong>
+    <ul>
+      <li>Customers must report with a web check-in boarding pass after completing the online health declaration (HLOK).</li>
+      <li>Web check-in will generate one boarding pass with two seat numbers printed.</li>
+      <li>EXST SSR will be printed on the boarding pass to indicate extra seat booking.</li>
+    </ul>
+
+    <strong>3) Staff Procedures in GoNow</strong>
+    <ul>
+      <li>After retrieving the PNR, staff must select only the first customer.</li>
+      <li>De-select the second customer (with ‘EXTRASEAT’ as middle name and DBST SSR).</li>
+      <li>The second customer remains a no-show in the system but retains seat assignment.</li>
+      <li>Do not divide PNR or cancel second customer’s booking for Go Show or refund.</li>
+    </ul>
+
+    <strong>4) Boarding Pass & Seat Allocation</strong>
+    <ul>
+      <li>If boarding pass is printed at a kiosk or counter, staff must manually write the second seat number.</li>
+      <li>Ensure the second seat is not assigned to any other customer.</li>
+      <li>EXST SSR helps staff identify double seat customers.</li>
+    </ul>
+
+    <strong>5) Emergency Exit Seat Considerations</strong>
+    <ul>
+      <li>Customers in emergency exit rows must meet eligibility as per CHM 7, Issue 01, Rev 00, Section 4.0.</li>
+      <li>If not eligible, seat must be changed after polite explanation.</li>
+    </ul>
+
+    <strong>6) Extra Seat for Stowing Personal Items</strong>
+    <ul>
+      <li>Allowed for non-bulky items like:
+        <ul>
+          <li>Cabin bags, funeral urns, artifacts</li>
+          <li>Musical instruments, diplomatic mail</li>
+        </ul>
+      </li>
+      <li>Customer should occupy the middle seat and stow items on the adjacent window (or aisle) seat.</li>
+      <li>Items must:
+        <ul>
+          <li>Not exceed 75 kg</li>
+          <li>Be secured with seat belts</li>
+          <li>Not block evacuation paths or safety</li>
+          <li>Not be placed on emergency exit seats or floor-level exits</li>
+        </ul>
+      </li>
+    </ul>
+
+    <strong>7) Manifest Details</strong>
+    <ul>
+      <li>Both names will appear in the seat assignment manifest.</li>
+      <li>Status Indicators:
+        <ul>
+          <li><strong>EXST SSR:</strong> FF (Checked-in and Boarded)</li>
+          <li><strong>DBST SSR:</strong> Blank (No-show but with seat assignment)</li>
+        </ul>
+      </li>
+      <li>Helps cabin crew identify and ensure seat is not occupied by another passenger.</li>
+    </ul>
+  </div>
+</div>
+
+
+  </div>
+
+  <script>
+    function toggleFAQ(header) {
+      const allCards = document.querySelectorAll('.faq-card');
+      allCards.forEach(card => {
+        if (card !== header.parentElement) {
+          card.classList.remove('open');
+          const otherContent = card.querySelector('.faq-content');
+          otherContent.classList.remove('open');
+          otherContent.style.maxHeight = 0;
+        }
+      });
+
+      const card = header.parentElement;
+      const content = card.querySelector('.faq-content');
+      const isOpen = card.classList.toggle("open");
+      content.classList.toggle("open");
+      content.style.maxHeight = isOpen ? content.scrollHeight + "px" : 0;
+    }
+
+    function toggleDarkMode() {
+      document.body.classList.toggle('dark-mode');
+    }
+  </script>
+
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Quiz_IATA Codes</title>
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js" defer></script>
+<style>
+    body { font-family: Arial, sans-serif; background: #f4f7fb; padding: 20px; margin: 0; color: #333; }
+    .top-bar { display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; flex-wrap: wrap; }
+    .progress-container { flex: 1; background: #ddd; height: 10px; border-radius: 5px; overflow: hidden; margin-right: 15px; min-width: 200px; }
+    .progress-bar { height: 10px; width: 0%; background-color: #3498db; transition: width 0.5s; }
+    .question-counter { font-size: 14px; color: #555; min-width: 70px; text-align: right; margin-top: 5px; }
+    h2 { text-align: center; color: #2c3e50; margin-bottom: 30px; }
+    .card { background: white; padding: 30px; border-radius: 12px; box-shadow: 0 6px 18px rgba(0,0,0,0.1); max-width: 600px; margin: auto; }
+    .header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; }
+    .timer { font-size: 16px; font-weight: bold; padding: 6px 12px; border-radius: 6px; }
+    .timer.green { color: #28a745; }
+    .timer.red { color: #e74c3c; }
+    .question { font-size: 20px; margin-bottom: 10px; }
+    .options label { display: block; padding: 12px; border-radius: 6px; border: 1px solid #ccc; margin-bottom: 12px; cursor: pointer; transition: background 0.2s; }
+    .options label:hover { background: #eef6ff; }
+    .options input[type="radio"] { margin-right: 10px; }
+       .btn {
+        background: #2980b9;
+        color: white;
+        padding: 12px 24px; 
+        border: none;
+        border-radius: 8px; 
+        cursor: pointer;
+        font-size: 16px; 
+        font-weight: 600; 
+        margin: 10px 8px; 
+        transition: background-color 0.3s ease, transform 0.2s ease; 
+    }
+    .btn:hover {
+        background: #3498db; 
+        transform: translateY(-2px); 
+    }
+    .btn:disabled {
+        background: #bdc3c7;
+        cursor: not-allowed;
+        transform: none; 
+    }
+        #restart-button {
+        background: #2980b9; 
+        padding: 12px 24px; 
+        font-size: 16px; 
+        font-weight: 600; 
+        border-radius: 8px; 
+    }
+
+    #restart-button:hover {
+        background: #3498db; 
+    }
+
+    .score-display { background: #e6f9e6; padding: 15px; margin-bottom: 20px; border-left: 5px solid #28a745; border-radius: 8px; max-width: 600px; margin: 0 auto 20px; text-align: center; }
+    table.history-table { width: 100%; border-collapse: collapse; margin-top: 15px; }
+    table.history-table th, table.history-table td { padding: 8px; text-align: center; border-bottom: 1px solid #ddd; }
+    table.history-table th { background: #f0f0f0; }
+    .latest-score { background: #fff9c4; font-weight: bold; }
+    .sort-button { background: none; border: none; font-size: 16px; cursor: pointer; color: #2980b9; margin-bottom: 10px; }
+    .sort-button:hover { text-decoration: underline; }
+    .sound-toggle { font-size: 16px; cursor: pointer; user-select: none; margin-left: 15px; }
+    .sound-toggle:hover { color: #3498db; }
+    .asked-in { font-size: 14px; color: #777; font-weight: normal; margin-left: 8px; }
+    .footnote { text-align: center; margin-top: 40px; font-size: 14px; color: #888; }
+    .explanation { margin-top: 20px; background: #eef6ff; padding: 15px; border-radius: 8px; }
+    .correct { background: #d4edda !important; }
+    .wrong { background: #f8d7da !important; }
+    #start-button { display: block; margin: 0 auto; padding: 12px 24px; background-color: #2980b9; color: white; border: none; border-radius: 8px; font-size: 16px; cursor: pointer; transition: background-color 0.3s ease; }
+    #start-button:hover { background-color: #3498db; }
+
+    .highlight-latest-result {
+        background-color: #d4edda;
+        color: #155724;
+        border-left: 6px solid #28a745;
+        padding: 12px 20px;
+        border-radius: 10px;
+        font-size: 18px;
+        font-weight: bold;
+        margin: 0 auto 20px auto;
+        max-width: 600px;
+        text-align: center;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    }
+    .history-actions {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin-top: 20px;
+    }
+    .alert {
+        position: absolute;
+        top: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+        background-color: rgba(255, 0, 0, 0.8);
+        color: white;
+        padding: 10px;
+        font-weight: bold;
+        border-radius: 6px;
+        display: none;
+        z-index: 9999;
+    }
+    .pagination-info {
+        text-align: center;
+        margin-top: 10px;
+        font-size: 16px;
+        font-weight: bold;
+    }
+    .history-actions button {
+        display: inline-block;
+        margin: 10px;
+    }
+
+        .latest-score {
+        background-color: #fff9c4;
+        font-weight: bold;
+        border-left: 6px solid #28a745;
+        padding: 12px 20px;
+        border-radius: 10px;
+        font-size: 18px;
+        margin: 0 auto 20px auto;
+        max-width: 600px;
+        text-align: center;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    }
+
+        .oldest-score {
+        background-color: #fce8b2;
+        font-weight: bold;
+        border-left: 6px solid #f39c12;
+        padding: 12px 20px;
+        border-radius: 10px;
+        font-size: 18px;
+        margin: 0 auto 20px auto;
+        max-width: 600px;
+        text-align: center;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    }
+
+    .btn-primary {
+        background-color: #3498db;
+        color: white;
+        font-weight: bold;
+    }
+
+    .pagination-info {
+        display: flex;
+        justify-content: center;
+        gap: 8px;
+        flex-wrap: wrap;
+        margin-top: 20px;
+    }
+</style>
+</head>
+<body>
+<div class="top-bar">
+  <div class="progress-container"><div class="progress-bar" id="progress-bar"></div></div>
+  <div class="question-counter" id="question-counter">Ready?</div>
+  <div class="sound-toggle" onclick="toggleSound()"><span id="sound-icon">🔊</span> <span id="sound-text">Sound ON</span></div>
+
+</div>
+<h2>Quiz_IATA Codes</h2>
+<div id="score-container"></div>
+<div id="quiz-container"></div>
+<div class="alert" id="alert">Hurry up! Time's running out!</div>
+<button id="start-button" onclick="startQuiz()">Start Quiz</button>
+<audio id="correct-sound" src="https://dm0qx8t0i9gc9.cloudfront.net/watermarks/audio/B4CWlP_CIkc1kju2x/audioblocks-feedback-correct-07_HiQUhCpDv_WM.mp3" preload="auto"></audio>
+<audio id="wrong-sound" src="https://www.soundjay.com/buttons/sounds/button-10.mp3" preload="auto"></audio>
+<div class="footnote">Prepared by Krishnanunni, ifly-BLR</div>
+<script>
+const progressBar = document.getElementById("progress-bar");
+const questionCounter = document.getElementById("question-counter");
+const container = document.getElementById("quiz-container");
+const scoreContainer = document.getElementById("score-container");
+const correctSound = document.getElementById("correct-sound");
+const wrongSound = document.getElementById("wrong-sound");
+const startButton = document.getElementById("start-button");
+const alertElement = document.getElementById("alert");
+let currentIndex = 0, score = 0, startTime, timerInterval, sortNewestFirst = true;
+let answeredQuestions = [];
+const RESULTS_PER_PAGE = 5;
+let currentPage = 1;
+const quizData =[
+  {
+    "question": "How much prior notice must customers with guide dogs provide to IndiGo before departure?",
+    "options": ["24 hours", "36 hours", "48 hours", "72 hours"],
+    "answer_index": 2,
+    "explanation": "Customers with sensory impairments intending to travel with a guide dog must inform IndiGo at least 48 hours prior to departure."
+  },
+  {
+    "question": "Where are customers with guide dogs usually seated on IndiGo flights?",
+    "options": ["Last row - aisle seat", "First row - window seat", "Middle row - window seat", "Any available seat"],
+    "answer_index": 1,
+    "explanation": "Customers with guide dogs are seated in the first row – window seat for ease of accessibility."
+  },
+  {
+    "question": "What item must customers bring for their guide dog during travel?",
+    "options": ["Collapsible water bowl", "Moisture absorbent mat", "Chew toy", "Sleeping bag"],
+    "answer_index": 1,
+    "explanation": "Customers are required to bring a moisture absorbent mat to place under the guide dog."
+  },
+  {
+    "question": "Which of the following is NOT a requirement for a guide dog on IndiGo flights?",
+    "options": ["Must be vaccinated", "Must be muzzled", "Must be clean", "Must wear a life jacket"],
+    "answer_index": 3,
+    "explanation": "Guide dogs must be vaccinated, muzzled, clean, and restrained, but do not need to wear a life jacket."
+  },
+  {
+    "question": "What is the maximum number of guide dogs allowed per flight per sector on IndiGo?",
+    "options": ["No limit", "Two", "One", "Three"],
+    "answer_index": 2,
+    "explanation": "Only one guide dog can be accepted per flight per sector."
+  },
+  {
+    "question": "Are guide dogs permitted on ATR 72-600 aircrafts?",
+    "options": ["Yes, with conditions", "No", "Only for domestic flights", "Only if muzzled"],
+    "answer_index": 1,
+    "explanation": "Guide dogs are not allowed on ATR 72-600 aircrafts due to safety reasons."
+  },
+
+
+  {
+    "question": "How must customers requiring a stretcher make a reservation?",
+    "options": ["At the airport", "Via mobile app", "Through the call center", "On the IndiGo website"],
+    "answer_index": 2,
+    "explanation": "Reservations for customers requiring a stretcher must be processed through the call center."
+  },
+  {
+    "question": "How many hours in advance must the MEDIF form be submitted for stretcher reservations?",
+    "options": ["12 hours", "24 hours", "36 hours", "48 hours"],
+    "answer_index": 3,
+    "explanation": "The reservation for stretcher use must be made at least 48 hours prior to departure."
+  },
+  {
+    "question": "What additional cost is associated with stretcher services on IndiGo?",
+    "options": ["Cost of 2 extra seats", "Cost of 5 extra seats", "Cost of 9 seats+ 1 Seat", "No extra cost"],
+    "answer_index": 2,
+    "explanation": "Customers must pay the cost of 9 seats for stretcher services, plus an additional seat for Safety Assistant"
+  },
+
+  {
+    "question": "Where on the aircraft are stretcher customers accommodated?",
+    "options": ["First row", "Last 3 rows on port side", "Emergency exit row", "Middle row only"],
+    "answer_index": 1,
+    "explanation": "The last 3 rows on the port side are blocked for stretcher customers."
+  },
+
+  {
+    "question": "What is the standard baggage allowance on IndiGo domestic flights?",
+    "options": ["10 kg", "15 kg", "20 kg", "25 kg"],
+    "answer_index": 1,
+    "explanation": "The standard baggage allowance for domestic flights is one piece weighing 15 kg."
+  },
+  {
+    "question": "What does ABHF stand for in IndiGo baggage policy?",
+    "options": ["Additional Baggage Handling Fee", "Air Baggage Heavy Fee", "Airport Baggage Holding Fee", "Authorized Baggage Handling Form"],
+    "answer_index": 0,
+    "explanation": "ABHF stands for Additional Baggage Handling Fee."
+  },
+  {
+    "question": "How much is the ABHF fee for one additional check-in bag?",
+    "options": ["₹500", "₹1000", "₹750", "₹1500"],
+    "answer_index": 1,
+    "explanation": "A fee of ₹1000 is charged for each additional check-in bag under ABHF."
+  },
+  {
+    "question": "If a customer carries 2 check-in bags totaling 15 kg, what should the staff do?",
+    "options": ["No fee is applied", "Apply ABHF once", "Apply ABHF twice", "Only excess baggage is charged"],
+    "answer_index": 1,
+    "explanation": "ABHF must be applied once for the additional piece even if total weight is within 15 kg."
+  },
+  {
+    "question": "If a customer has 3 bags weighing 15 kg total, how many times is ABHF charged?",
+    "options": ["Once", "Twice", "None", "Three times"],
+    "answer_index": 1,
+    "explanation": "ABHF must be charged twice as the customer is carrying two additional bags."
+  },
+  {
+    "question": "If a customer carries 2 bags weighing 20 kg, what should be collected?",
+    "options": ["Only ABHF", "Only excess baggage", "Excess baggage + ABHF", "No charges"],
+    "answer_index": 2,
+    "explanation": "Both excess baggage charges and ABHF must be collected when weight exceeds and there's more than one bag."
+  },
+  {
+    "question": "Where must staff add the ABHF fee during check-in?",
+    "options": ["System automatically adds", "Manually added in F6", "Customer app", "Check-in kiosk"],
+    "answer_index": 1,
+    "explanation": "Staff must manually select and add the ABHF fee in F6 system."
+  },
+
+  {
+    "question": "What additional fee does IndiGo apply for LCD/LED TVs of 40 inches and above?",
+    "options": ["Standard baggage fee", "Only excess baggage fee", "Special baggage fee", "No extra fee"],
+    "answer_index": 2,
+    "explanation": "IndiGo levies a special baggage fee for LCD/LED TVs of size 40 inches and above, in addition to any excess baggage charges."
+  },
+  {
+    "question": "What should not be charged at the airport if the PNR has a SPEQ SSR attached?",
+    "options": ["Excess baggage fee", "Special handling fee", "BULK charges", "Boarding pass reprint fee"],
+    "answer_index": 2,
+    "explanation": "If the PNR has a SPEQ SSR (Pre-booked Sports Equipment) attached, airport staff should not charge BULK charges during check-in."
+  },
+
+  {
+    "question": "What is one benefit a customer receives when booking a 6E Double Seat on IndiGo?",
+    "options": ["Free in-flight meal", "Priority boarding", "Additional 10 kg baggage allowance", "Free seat selection"],
+    "answer_index": 2,
+    "explanation": "Customers booking a 6E Double Seat receive an additional 10 kg baggage allowance and can carry 2 pieces of checked baggage."
+  },
+  {
+    "question": "For which flights can a 6E Double Seat NOT be booked?",
+    "options": [
+      "Flights departing in more than 3 hours (domestic)",
+      "Flights within 2 hours (domestic) and 4 hours (international)",
+      "All international flights",
+      "Flights with more than one stop"
+    ],
+    "answer_index": 1,
+    "explanation": "An extra seat cannot be booked for flights within 2 hours on domestic sectors and within 4 hours on international sectors."
+  },
+{
+    "question": "Why must IndiGo staff ensure not to assign the second seat of a 6E Double Seat booking to another customer?",
+    "options": [
+      "It is reserved for standby passengers",
+      "The seat is meant for customer comfort or stowage and not an actual second traveler",
+      "It may lead to overbooking",
+      "It is reserved for airport crew"
+    ],
+    "answer_index": 1,
+    "explanation": "The second seat in a 6E Double Seat booking is for personal comfort or stowage, not for another customer. It must not be reassigned or canceled."
+  },
+  {
+    "question": "What should staff do if a 6E Double Seat boarding pass is printed through a kiosk or counter?",
+    "options": [
+      "Reprint it from the web portal",
+      "Cancel the second seat",
+      "Manually write the second seat number on the boarding pass",
+      "Assign a new seat at the gate"
+    ],
+    "answer_index": 2,
+    "explanation": "If printed through a kiosk or counter, staff must manually mention the second seat number on the boarding pass, since only web check-in can print both seat numbers automatically."
+  },
+  {
+    "question": "What must be verified when a customer with a 6E Double Seat selects an emergency exit row?",
+    "options": [
+      "If they are carrying additional baggage",
+      "If they have a medical certificate",
+      "If they meet the eligibility criteria in CHM 7",
+      "If they are traveling with infants"
+    ],
+    "answer_index": 2,
+    "explanation": "Airport staff must verify that customers seated in emergency exit rows meet the eligibility criteria as per CHM 7, Issue 01, Rev 00, Section 4.0."
+  },
+{
+    "question": "How must items like a funeral urn or musical instrument be stowed when a customer books an extra seat for them?",
+    "options": [
+      "On the aisle seat next to the customer",
+      "In the overhead bin",
+      "In cargo hold",
+      "On the window seat while the customer occupies the middle seat"
+    ],
+    "answer_index": 3,
+    "explanation": "If an extra seat is booked for stowing personal items, those items must be placed on the window seat, and the customer should sit in the middle seat next to them."
+  }
+
+]
+
+function saveScore(score, totalQuestions) {
+  const totalTime = Math.floor((Date.now() - startTime) / 1000);
+  const percentage = Math.round((score / totalQuestions) * 100);
+  const history = JSON.parse(localStorage.getItem("quizHistory")) || [];
+  history.push({
+    title: document.querySelector("h2").textContent,
+    score,
+    totalQuestions,
+    percentage,
+    time: `${Math.floor(totalTime / 60)}m ${totalTime % 60}s`,
+    date: new Date().toLocaleString()
+  }); 
+  let attempts = localStorage.getItem("quizAttempts") || 0;
+  attempts = parseInt(attempts) + 1;  // Increment attempts
+  localStorage.setItem("quizAttempts", attempts);
+
+  localStorage.setItem("quizHistory", JSON.stringify(history));
+}
+
+let soundEnabled = true;
+
+function toggleSound() {
+  soundEnabled = !soundEnabled;
+  correctSound.muted = !soundEnabled;
+  wrongSound.muted = !soundEnabled;
+  document.getElementById("sound-icon").textContent = soundEnabled ? "🔊" : "🔇";
+  document.getElementById("sound-text").textContent = soundEnabled ? "Sound ON" : "Sound OFF";
+}
+
+function renderQuestion(index) {
+  clearInterval(timerInterval);
+  alertElement.style.display = "none";
+  const q = quizData[index];
+  container.innerHTML = `
+    <div class="card">
+      <div class="header"><div class="timer green" id="timer"></div></div>
+      <div class="question">${q.question}</div>
+      <div class="options">
+        ${q.options.map((opt, i) =>
+          `<label><input type="radio" name="option" value="${i}">${opt}</label>`).join("")}
+      </div>
+      <button class="btn" id="submit-btn">Submit</button>
+    </div>
+  `;
+  
+  questionCounter.textContent = `Q ${index + 1} / ${quizData.length}`;
+  document.getElementById("submit-btn").onclick = () => submitAnswer(index);
+  startTimer();
+}
+function submitAnswer(index) {
+  
+  if (answeredQuestions[index] === true) return;
+
+  const selected = document.querySelector('input[name="option"]:checked');
+  if (!selected) return;
+
+  document.getElementById("submit-btn").disabled = true;
+
+  clearInterval(timerInterval);
+  alertElement.style.display = "none";
+  const correctIndex = quizData[index].answer_index;
+  const allOptions = document.querySelectorAll('input[name="option"]');
+  allOptions.forEach(opt => opt.disabled = true);
+
+  const selectedLabel = selected.closest("label");
+  const correctLabel = allOptions[correctIndex].closest("label");
+  const isCorrect = parseInt(selected.value) === correctIndex;
+
+  if (isCorrect) {
+    score++;
+    selectedLabel.classList.add("correct");
+    answeredQuestions[index] = true;  // Mark this question as answered
+  } else {
+    selectedLabel.classList.add("wrong");
+    correctLabel.classList.add("correct");
+    answeredQuestions[index] = {  // Store user and correct answer in case of wrong answer
+      userAnswer: parseInt(selected.value),
+      correctAnswer: correctIndex
+    };
+  }
+
+  showResult(isCorrect);
+  const explanation = quizData[index].explanation;
+  const card = document.querySelector(".card");
+
+  const explanationDiv = document.createElement("div");
+  explanationDiv.className = "explanation";
+  explanationDiv.textContent = `Explanation: ${explanation}`;
+
+  progressBar.style.width = `${((currentIndex + 1) / quizData.length) * 100}%`;
+  const nextButton = document.createElement("button");
+  nextButton.className = "btn";
+  nextButton.textContent = currentIndex + 1 < quizData.length ? "Next Question" : "Finish Quiz";
+  nextButton.onclick = () => {
+    currentIndex++;
+    currentIndex < quizData.length ? renderQuestion(currentIndex) : endQuiz();
+  };
+  card.appendChild(explanationDiv);
+  card.appendChild(nextButton);
+  explanationDiv.scrollIntoView({ behavior: "smooth", block: "start" });
+}
+function viewIncorrectAnswers() {
+  let incorrectHTML = `
+    <h3>Incorrect Answers</h3>
+    <table class="history-table">
+      <thead><tr><th>Question</th><th>Your Answer</th><th>Correct Answer</th></tr></thead>
+      <tbody>
+  `;
+  quizData.forEach((q, i) => {
+    if (answeredQuestions[i] && answeredQuestions[i] !== true) {
+      const userAnswerIndex = answeredQuestions[i].userAnswer;
+      incorrectHTML += `
+        <tr>
+          <td>${q.question}</td>
+          <td>${q.options[userAnswerIndex]}</td>
+          <td>${q.options[q.answer_index]}</td>
+        </tr>
+      `;
+    }
+  });
+  incorrectHTML += `</tbody></table>
+    <div class="history-actions">
+      <button class="btn" onclick="viewHistory()">📖 View History</button>
+      <button class="btn" onclick="restartQuiz()">🔄 Restart Quiz</button>
+    </div>`;
+  scoreContainer.innerHTML = incorrectHTML;
+  container.style.display = "none"; // hide quiz
+}
+
+function startTimer() {
+  let remainingTime = 30;
+  const timer = document.getElementById("timer");
+  timer.textContent = `Time: ${remainingTime}s`;
+  timer.className = "timer green";
+  timerInterval = setInterval(() => {
+    remainingTime--;
+    timer.textContent = `Time: ${remainingTime}s`;
+    if (remainingTime <= 10) {
+      timer.className = "timer red";
+      if (container.style.display === "block") {
+        alertElement.style.display = "block";
+      }
+    } else {
+      alertElement.style.display = "none";
+    }
+    if (remainingTime <= 0) {
+      clearInterval(timerInterval);
+      alertElement.style.display = "none";
+      submitAnswer(currentIndex);
+    }
+  }, 1000);
+}
+const script = document.createElement('script');
+  script.src = "https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js";
+  script.defer = true;
+
+  script.onload = function() {
+    
+    console.log("Canvas Confetti has been loaded.");
+  };
+  document.head.appendChild(script);
+  function showResult(correct) {
+    const sound = correct ? correctSound : wrongSound;
+    sound.currentTime = 0;
+    if (soundEnabled) {
+      sound.play();
+    }
+    if (correct) triggerConfetti();  // Only trigger confetti if it's loaded
+    if (correct) {
+      setTimeout(() => { sound.pause(); sound.currentTime = 0; }, 2400);
+    }
+  }
+function throttle(fn, delay) {
+  let lastCall = 0;
+  return function (...args) {
+    const now = Date.now();
+    if (now - lastCall >= delay) {
+      lastCall = now;
+      return fn(...args);
+    }
+  };
+}
+const triggerConfetti = throttle(() => {
+  confetti({
+    particleCount: 100,
+    spread: 70,
+    origin: { x: 0.5, y: 0.5 },
+    colors: ['#ff0', '#ff5c5c', '#5c5cff', '#4caf50']
+  });
+}, 1000); // 1000 ms = 1 second
+
+function startQuiz() {
+  score = 0;
+  currentIndex = 0;
+  answeredQuestions = new Array(quizData.length).fill(false);  
+  startTime = Date.now();
+  startButton.style.display = "none";
+  container.style.display = "block";
+  renderQuestion(currentIndex);
+}
+
+function endQuiz() {
+  clearInterval(timerInterval);
+  alertElement.style.display = "none";
+  const percentage = ((score / quizData.length) * 100).toFixed(1);
+  scoreContainer.innerHTML = `
+    <div class="highlight-latest-result">🎉 You scored ${score} / ${quizData.length} (${percentage}%)</div>
+    <div class="score-display">
+      <p>Your Score: ${score} out of ${quizData.length}</p>
+      <p>Percentage: ${percentage}%</p>
+      <p>Time Taken: ${Math.floor((Date.now() - startTime) / 1000)} seconds</p>
+      <div class="history-actions">
+        <button class="btn" onclick="viewHistory()">📖 View History</button>
+        <button class="btn" onclick="restartQuiz()">🔄 Restart Quiz</button>
+        <button class="btn" onclick="viewIncorrectAnswers()">❌ View Incorrect Answers</button>
+      </div>
+    </div>
+  `;
+  container.style.display = "none";
+  saveScore(score, quizData.length);
+}
+function restartQuiz() {
+  location.reload();
+}
+  let sortDescending = true; 
+
+function viewHistory(page = 1) {
+  const history = JSON.parse(localStorage.getItem("quizHistory")) || [];
+  const attempts = localStorage.getItem("quizAttempts") || 0;  
+  
+  if (history.length === 0) {
+    scoreContainer.innerHTML = "<p>No quiz history found.</p>";
+    return;
+  }
+
+    const sortedHistory = history.sort((a, b) => {
+    const dateA = new Date(a.date);
+    const dateB = new Date(b.date);
+    return sortDescending ? dateB - dateA : dateA - dateB;
+  });
+
+  const totalPages = Math.ceil(sortedHistory.length / RESULTS_PER_PAGE);
+  const startIndex = (page - 1) * RESULTS_PER_PAGE;
+  const endIndex = startIndex + RESULTS_PER_PAGE;
+  const paginatedData = sortedHistory.slice(startIndex, endIndex);
+
+  let historyHTML = `<h3>Quiz History</h3>
+    <button id="toggle-sort" class="sort-button" onclick="toggleSortOrder()">
+      🔄 Sort Order (${sortDescending ? 'Latest' : 'Oldest'})
+    </button>
+    <p>Number of Attempts: ${attempts}</p>  <!-- Added attempts display -->
+    <table class="history-table">
+      <thead>
+        <tr><th>Title</th><th>Score</th><th>Percentage</th><th>Time Taken</th><th>Date</th></tr>
+      </thead>
+      <tbody>`;
+
+  paginatedData.forEach(entry => {
+    const isLatest = (sortDescending && new Date(entry.date).getTime() === new Date(sortedHistory[0].date).getTime()) ||
+                     (!sortDescending && new Date(entry.date).getTime() === new Date(sortedHistory[sortedHistory.length - 1].date).getTime());
+
+    const isOldest = (sortDescending && new Date(entry.date).getTime() === new Date(sortedHistory[sortedHistory.length - 1].date).getTime()) ||
+                     (!sortDescending && new Date(entry.date).getTime() === new Date(sortedHistory[0].date).getTime());
+
+    historyHTML += `<tr class="${isLatest ? 'latest-score' : ''} ${isOldest ? 'oldest-score' : ''}">
+                      <td>${entry.title}</td>
+                      <td>${entry.score} / ${entry.totalQuestions}</td>
+                      <td>${entry.percentage}%</td>
+                      <td>${entry.time}</td>
+                      <td>${entry.date}</td>
+                    </tr>`;
+  });
+
+  historyHTML += `</tbody></table><div class="history-actions">
+                    <button class="btn" onclick="restartQuiz()">🔄 Restart Quiz</button>`;
+      historyHTML += `<div class="pagination-info">`;
+
+  const maxVisiblePages = 3; // You can adjust this to show more pages
+  const halfVisible = Math.floor(maxVisiblePages / 2);
+
+  let startPage = Math.max(1, page - halfVisible);
+  let endPage = Math.min(totalPages, startPage + maxVisiblePages - 1);
+
+  if (endPage - startPage < maxVisiblePages - 1) {
+    startPage = Math.max(1, endPage - maxVisiblePages + 1);
+  }
+
+  if (page > 1) {
+    historyHTML += `<button class="btn" onclick="viewHistory(1)">« First</button>`;
+  }
+
+  for (let i = startPage; i <= endPage; i++) {
+    historyHTML += `<button class="btn${i === page ? ' btn-primary' : ''}" onclick="viewHistory(${i})">${i}</button>`;
+  }
+
+  if (page < totalPages) {
+    historyHTML += `<button class="btn" onclick="viewHistory(${totalPages})">Last »</button>`;
+  }
+
+  historyHTML += `</div>`;
+  scoreContainer.innerHTML = historyHTML;
+  container.style.display = "none";
+}
+
+function toggleSortOrder() {
+    sortDescending = !sortDescending;
+    const sortButton = document.getElementById("toggle-sort");
+    
+    // Update the button text based on the sort order state
+    sortButton.textContent = sortDescending ? "🔄 Sort Order (Latest)" : "🔄 Sort Order (Oldest)";
+    
+    // If sorted by oldest first, go to the last page
+    if (!sortDescending) {
+        const totalPages = Math.ceil(JSON.parse(localStorage.getItem("quizHistory")).length / RESULTS_PER_PAGE);
+        viewHistory(totalPages);  // Go to the last page
+    } else {
+        viewHistory(1);  // Otherwise, go to the first page
+    }
+}
+</script>
+</body>
+</html>
